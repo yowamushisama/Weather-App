@@ -6,27 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;1,400&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
 </head>
 <body>
     <div class="">
         <header>
             <h1>Weather App</h1>
         </header>
-        <hr>
-        <form id="location-form">
-            <label for="City" id= "location" placeholder= "Enter your location">City: </label>
-            <input type="text"><br>
-           <input type="submit" value="Get Weather" id="Submit"> 
-        </form>
+      <hr>
         <div class="weather-data">
+            <form id="location-form">
+                <label for="City" id= "location" >City: </label>
+                <input type="text" id="search-bar" placeholder="Enter City" >
+                <button onclick="search()">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </form>
             <div class="Weather-City">
                 <h2>Weather in Lahore</h2>
             </div>
-            <div class="temperature">Temperature:51°C</div>
+            <div class="temperature">51°C</div>
+         <div class="other-properties">
             <div class="description">Cloudy</div>
-            <div class="humdity">Humidity:10%</div>
-            <div class="wind-speed">Wind Speed:60km/h</div>
-        
+            <div class="humidity">Humidity: 10%</div>
+            <div class="wind-speed">Wind Speed: 60km/h</div>
+         </div>
     </div>
     
 

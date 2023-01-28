@@ -1,13 +1,10 @@
-fetch('https://dataservice.accuweather.com/locations/v1/locationKey?apikey=1213&language=en-us&details=true', {
-  method: 'GET',
-  headers: {
-    'Content-Type': 'application/json'
+let weather ={
+  "apiKey":"9386953c310aad1633b56342e6747912",
+  fetchWeather: function(){
+    fetch(
+      "https://api.openweathermap.org/data/2.5/weather?q=Denver&units=metric&appid=9386953c310aad1633b56342e6747912"
+      )
+      .then((response) =>response.json())
+      .then((data) => console.log(data));
   }
-})
-.then(response => response.json())
-.then(data => {
-  console.log(data)
-})
-.catch(error => {
-  console.log(error);
-});
+}
